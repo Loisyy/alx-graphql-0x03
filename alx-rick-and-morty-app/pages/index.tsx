@@ -1,5 +1,6 @@
 import { GET_EPISODES } from "@/graphql/queries"
 import { EpisodeProps } from "@/interfaces"
+import ErrorProneComponent from "@/components/ErrorProneComponent";
 
 interface InfoProps {
   pages: number;
@@ -81,6 +82,9 @@ const Home: React.FC = () => {
         <p>&copy; 2024 Rick and Morty Fan Page</p>
       </footer>
     </div>
+    <ErrorBoundary>
+      <ErrorProneComponent />
+    </ErrorBoundary>
   )
 }
 
